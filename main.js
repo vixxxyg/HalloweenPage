@@ -24,5 +24,7 @@ const sr = ScrollReveal({
 })
 
 sr.reveal(`.home-swiper, .new-swiper, .newsletter__container`)
-
+sr.reveal(`.category__data, .trick__content, .footer__content`, {
+    interval: 1000
+})
 // ScrollReveal().reveal('.home-swiper');
