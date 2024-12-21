@@ -14,6 +14,30 @@ if(navClose) {
     })
 }
 
+const navLink = document.querySelectorAll(".nav__link")
+function linkAction() {
+    navMenu.classList.remove("show-menu")
+}
+
+navLink.forEach(link => link.addEventListener('click', linkAction))
+
+//Swiper
+let homeSwiper = new Swiper(".home-swiper",{
+    spaceBetween: 30,
+    loop: "true",
+    pagination: {
+        el: ".swiper_pagination",
+        clickable: true,
+    },
+})
+
+let newSWiper = new Swiper(".new-swiper", {
+    centeredSlides: true,
+    slidesPerView: "auto",
+    loop: "true",
+    spaceBetween: 16,
+})
+
 //Scroll reveal
 const sr = ScrollReveal({
     origin: 'top',
@@ -30,4 +54,7 @@ sr.reveal(`.category__data, .trick__content, .footer__content`, {
 sr.reveal(`.about__data, .discount__img`, {
     origin: "left"
 })
-// ScrollReveal().reveal('.home-swiper');
+sr.reveal(`.about__img, .discont__data`, {
+    origin: "right"
+})
+
