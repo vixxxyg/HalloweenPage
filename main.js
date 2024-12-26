@@ -75,7 +75,6 @@ const sr = ScrollReveal({
   distance: "60px",
   duration: 2500,
   delay: 350,
-  reset: true,
 });
 
 sr.reveal(`.home-swiper, .new-swiper, .newsletter__container`);
